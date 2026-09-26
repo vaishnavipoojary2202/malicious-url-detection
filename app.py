@@ -80,8 +80,8 @@ st.markdown(
     <style>
         /* Main page */
         .stApp {
-            background: #F5F4F0;
-            color: #112250;
+            background: linear-gradient(135deg, #000F22 0%, #1B3554 38%, #3F6593 68%, #80AAD3 100%);
+            color: #C0E6FD;
         }
 
         .block-container {
@@ -92,12 +92,12 @@ st.markdown(
 
         /* Header */
         .hero {
-            background: radial-gradient(circle at 20% 15%, rgba(231, 226, 206, 0.18), transparent 28%), radial-gradient(circle at 85% 75%, rgba(190, 183, 167, 0.16), transparent 25%), linear-gradient(135deg, #112250 0%, #1b315b 55%, #3B507D 100%);
+            background: linear-gradient(135deg, #000F22 0%, #1B3554 48%, #3F6593 100%);
             padding: 3.2rem 2rem;
             border-radius: 2px;
             text-align: center;
             box-shadow: 0 16px 35px rgba(17, 34, 80, 0.16);
-            border: 1px solid rgba(231, 226, 206, 0.45);
+            border: 1px solid rgba(192, 230, 253, 0.28);
             margin-bottom: 2rem;
         }
 
@@ -107,7 +107,7 @@ st.markdown(
         }
 
         .hero-title {
-            color: #F5F4F0;
+            color: #C0E6FD;
             font-size: 2.45rem;
             font-weight: 500;
             letter-spacing: 0.02em;
@@ -115,23 +115,23 @@ st.markdown(
         }
 
         .hero-subtitle {
-            color: #E7E2CE;
+            color: #C0E6FD;
             font-size: 0.98rem;
             letter-spacing: 0.04em;
             margin-top: 0.7rem;
         }
 
         div[data-testid="stCaptionContainer"] {
-            color: #3B507D;
+            color: #80AAD3;
         }
 
         .stSpinner > div {
-            color: #E7E2CE;
+            color: #C0E6FD;
         }
 
         /* Section headings */
         .section-title {
-            color: #112250;
+            color: #C0E6FD;
             font-size: 1.05rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -142,41 +142,41 @@ st.markdown(
 
         /* Input */
         div[data-testid="stTextInput"] label {
-            color: #E7E2CE;
+            color: #C0E6FD;
             font-weight: 650;
         }
 
         div[data-testid="stTextInput"] input {
-            border: 1px solid #BEB7A7;
+            border: 1px solid #80AAD3;
             border-radius: 2px;
-            background: #fffdf8;
-            color: #112250;
+            background: #1B3554;
+            color: #C0E6FD;
             padding: 1rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #3B507D;
-            box-shadow: 0 0 0 3px rgba(59, 80, 125, 0.10);
+            border-color: #C0E6FD;
+            box-shadow: 0 0 0 3px rgba(192, 230, 253, 0.12);
         }
 
         /* Analyze button */
         div.stButton > button {
             width: 100%;
             border-radius: 2px;
-            border: 1px solid #B08B4F;
-            background: #E7E2CE;
-            color: #112250;
+            border: 1px solid #80AAD3;
+            background: #5B86B6;
+            color: white;
             font-weight: 700;
             font-size: 1rem;
             padding: 0.75rem 1rem;
             min-height: 3rem;
-            box-shadow: 0 8px 18px rgba(17, 34, 80, 0.12);
+            box-shadow: 0 8px 20px rgba(0, 15, 34, 0.28);
             transition: all 0.2s ease;
         }
 
         div.stButton > button:hover {
             background: #BEB7A7;
-            border: 1px solid #B08B4F;
+            border: 1px solid #80AAD3;
             color: #112250;
             transform: translateY(-1px);
         }
@@ -187,9 +187,9 @@ st.markdown(
             padding: 1.6rem 1.5rem;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #112250 0%, #3B507D 100%);
-            box-shadow: 0 14px 30px rgba(17, 34, 80, 0.18);
-            border: 1px solid #BEB7A7;
+            background: linear-gradient(135deg, #1B3554 0%, #3F6593 100%);
+            box-shadow: 0 14px 30px rgba(0, 15, 34, 0.28);
+            border: 1px solid #80AAD3;
         }
 
         .result-safe {
@@ -204,7 +204,7 @@ st.markdown(
             font-size: 0.8rem;
             font-weight: 750;
             letter-spacing: 0.08em;
-            color: #E7E2CE;
+            color: #C0E6FD;
             text-transform: uppercase;
         }
 
@@ -212,20 +212,20 @@ st.markdown(
             font-size: 1.55rem;
             font-weight: 800;
             margin-top: 0.25rem;
-            color: #F5F4F0;
+            color: #C0E6FD;
         }
 
         .probability {
             font-size: 2rem;
             font-weight: 800;
-            color: #E7E2CE;
+            color: #C0E6FD;
             margin-top: 0.35rem;
         }
 
         /* URL card */
         .url-card {
-            background: #fffdf8;
-            border: 1px solid #BEB7A7;
+            background: #1B3554;
+            border: 1px solid #80AAD3;
             border-radius: 2px;
             padding: 0.9rem 1rem;
             margin-top: 0.8rem;
@@ -238,26 +238,26 @@ st.markdown(
         .luxury-divider {
             width: 70px;
             height: 2px;
-            background: #B08B4F;
+            background: #C0E6FD;
             margin: 1rem auto 0;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            color: #BEB7A7;
+            color: #80AAD3;
             font-size: 0.82rem;
             margin-top: 2.2rem;
             padding-top: 1rem;
-            border-top: 1px solid #BEB7A7;
+            border-top: 1px solid #3F6593;
         }
 
         /* Streamlit alerts */
         div[data-testid="stAlert"] {
             border-radius: 2px;
-            background: #E7E2CE;
-            color: #112250;
-            border: 1px solid #BEB7A7;
+            background: #5B86B6;
+            color: white;
+            border: 1px solid #80AAD3;
         }
     </style>
     """,
