@@ -80,8 +80,8 @@ st.markdown(
     <style>
         /* Main page */
         .stApp {
-            background: radial-gradient(circle at 50% 0%, #173a6b 0%, #0b1b34 42%, #061224 100%);
-            color: #e5efff;
+            background: #112250;
+            color: #F5F4F0;
         }
 
         .block-container {
@@ -92,11 +92,11 @@ st.markdown(
 
         /* Header */
         .hero {
-            background: linear-gradient(135deg, #07172e 0%, #123a6b 55%, #1d5ca8 100%);
+            background: linear-gradient(135deg, #112250 0%, #3B507D 100%);
             padding: 2.2rem 2rem;
             border-radius: 24px;
             text-align: center;
-            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
             margin-bottom: 1.5rem;
         }
 
@@ -106,21 +106,29 @@ st.markdown(
         }
 
         .hero-title {
-            color: white;
+            color: #F5F4F0;
             font-size: 2.15rem;
             font-weight: 750;
             margin: 0;
         }
 
         .hero-subtitle {
-            color: #b9d8ff;
+            color: #E7E2CE;
             font-size: 1rem;
             margin-top: 0.55rem;
         }
 
+        div[data-testid="stCaptionContainer"] {
+            color: #BEB7A7;
+        }
+
+        .stSpinner > div {
+            color: #E7E2CE;
+        }
+
         /* Section headings */
         .section-title {
-            color: #b9d8ff;
+            color: #E7E2CE;
             font-size: 1.15rem;
             font-weight: 700;
             margin-top: 1rem;
@@ -129,21 +137,21 @@ st.markdown(
 
         /* Input */
         div[data-testid="stTextInput"] label {
-            color: #c7dcf7;
+            color: #E7E2CE;
             font-weight: 650;
         }
 
         div[data-testid="stTextInput"] input {
-            border: 1.5px solid #315986;
+            border: 1.5px solid #BEB7A7;
             border-radius: 14px;
-            background: #0d203b;
-            color: #eef6ff;
+            background: #F5F4F0;
+            color: #112250;
             padding: 0.85rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #60a5fa;
-            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.14);
+            border-color: #E7E2CE;
+            box-shadow: 0 0 0 3px rgba(231, 226, 206, 0.18);
         }
 
         /* Analyze button */
@@ -151,20 +159,20 @@ st.markdown(
             width: 100%;
             border-radius: 14px;
             border: none;
-            background: linear-gradient(90deg, #1d4ed8, #2563eb);
-            color: white;
+            background: #3B507D;
+            color: #F5F4F0;
             font-weight: 700;
             font-size: 1rem;
             padding: 0.75rem 1rem;
             min-height: 3rem;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.20);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
             transition: all 0.2s ease;
         }
 
         div.stButton > button:hover {
-            background: linear-gradient(90deg, #1e40af, #1d4ed8);
+            background: #112250;
             border: none;
-            color: white;
+            color: #F5F4F0;
             transform: translateY(-1px);
         }
 
@@ -174,9 +182,9 @@ st.markdown(
             padding: 1.35rem 1.5rem;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
-            background: #102746;
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.24);
-            border: 1px solid #24466e;
+            background: #3B507D;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+            border: 1px solid #BEB7A7;
         }
 
         .result-safe {
@@ -191,7 +199,7 @@ st.markdown(
             font-size: 0.8rem;
             font-weight: 750;
             letter-spacing: 0.08em;
-            color: #8fb6e8;
+            color: #E7E2CE;
             text-transform: uppercase;
         }
 
@@ -199,24 +207,24 @@ st.markdown(
             font-size: 1.55rem;
             font-weight: 800;
             margin-top: 0.25rem;
-            color: #edf5ff;
+            color: #F5F4F0;
         }
 
         .probability {
             font-size: 2rem;
             font-weight: 800;
-            color: #7db7ff;
+            color: #E7E2CE;
             margin-top: 0.25rem;
         }
 
         /* URL card */
         .url-card {
-            background: #091a30;
-            border: 1px solid #24466e;
+            background: #F5F4F0;
+            border: 1px solid #BEB7A7;
             border-radius: 14px;
             padding: 0.9rem 1rem;
             margin-top: 0.8rem;
-            color: #c9dcf4;
+            color: #112250;
             word-break: break-all;
             font-family: monospace;
         }
@@ -224,19 +232,19 @@ st.markdown(
         /* Footer */
         .footer {
             text-align: center;
-            color: #7896b8;
+            color: #BEB7A7;
             font-size: 0.82rem;
             margin-top: 2.2rem;
             padding-top: 1rem;
-            border-top: 1px solid #1e3b5d;
+            border-top: 1px solid #3B507D;
         }
 
         /* Streamlit alerts */
         div[data-testid="stAlert"] {
             border-radius: 14px;
-            background: #122946;
-            color: #dbeafe;
-            border: 1px solid #24466e;
+            background: #3B507D;
+            color: #F5F4F0;
+            border: 1px solid #BEB7A7;
         }
     </style>
     """,
