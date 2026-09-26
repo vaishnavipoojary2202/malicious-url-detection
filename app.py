@@ -80,8 +80,8 @@ st.markdown(
     <style>
         /* Main page */
         .stApp {
-            background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
-            color: #172033;
+            background: radial-gradient(circle at 50% 0%, #173a6b 0%, #0b1b34 42%, #061224 100%);
+            color: #e5efff;
         }
 
         .block-container {
@@ -92,11 +92,11 @@ st.markdown(
 
         /* Header */
         .hero {
-            background: linear-gradient(135deg, #0f2a5f 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #07172e 0%, #123a6b 55%, #1d5ca8 100%);
             padding: 2.2rem 2rem;
             border-radius: 24px;
             text-align: center;
-            box-shadow: 0 12px 35px rgba(37, 99, 235, 0.18);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
             margin-bottom: 1.5rem;
         }
 
@@ -113,14 +113,14 @@ st.markdown(
         }
 
         .hero-subtitle {
-            color: #dbeafe;
+            color: #b9d8ff;
             font-size: 1rem;
             margin-top: 0.55rem;
         }
 
         /* Section headings */
         .section-title {
-            color: #0f2a5f;
+            color: #b9d8ff;
             font-size: 1.15rem;
             font-weight: 700;
             margin-top: 1rem;
@@ -129,21 +129,21 @@ st.markdown(
 
         /* Input */
         div[data-testid="stTextInput"] label {
-            color: #334155;
+            color: #c7dcf7;
             font-weight: 650;
         }
 
         div[data-testid="stTextInput"] input {
-            border: 1.5px solid #bfdbfe;
+            border: 1.5px solid #315986;
             border-radius: 14px;
-            background: white;
-            color: #172033;
+            background: #0d203b;
+            color: #eef6ff;
             padding: 0.85rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.14);
         }
 
         /* Analyze button */
@@ -174,9 +174,9 @@ st.markdown(
             padding: 1.35rem 1.5rem;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
-            background: white;
-            box-shadow: 0 10px 30px rgba(15, 42, 95, 0.10);
-            border: 1px solid #dbeafe;
+            background: #102746;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.24);
+            border: 1px solid #24466e;
         }
 
         .result-safe {
@@ -191,7 +191,7 @@ st.markdown(
             font-size: 0.8rem;
             font-weight: 750;
             letter-spacing: 0.08em;
-            color: #64748b;
+            color: #8fb6e8;
             text-transform: uppercase;
         }
 
@@ -199,24 +199,24 @@ st.markdown(
             font-size: 1.55rem;
             font-weight: 800;
             margin-top: 0.25rem;
-            color: #0f172a;
+            color: #edf5ff;
         }
 
         .probability {
             font-size: 2rem;
             font-weight: 800;
-            color: #2563eb;
+            color: #7db7ff;
             margin-top: 0.25rem;
         }
 
         /* URL card */
         .url-card {
-            background: #f8fafc;
-            border: 1px solid #dbeafe;
+            background: #091a30;
+            border: 1px solid #24466e;
             border-radius: 14px;
             padding: 0.9rem 1rem;
             margin-top: 0.8rem;
-            color: #334155;
+            color: #c9dcf4;
             word-break: break-all;
             font-family: monospace;
         }
@@ -224,16 +224,19 @@ st.markdown(
         /* Footer */
         .footer {
             text-align: center;
-            color: #64748b;
+            color: #7896b8;
             font-size: 0.82rem;
             margin-top: 2.2rem;
             padding-top: 1rem;
-            border-top: 1px solid #dbeafe;
+            border-top: 1px solid #1e3b5d;
         }
 
         /* Streamlit alerts */
         div[data-testid="stAlert"] {
             border-radius: 14px;
+            background: #122946;
+            color: #dbeafe;
+            border: 1px solid #24466e;
         }
     </style>
     """,
