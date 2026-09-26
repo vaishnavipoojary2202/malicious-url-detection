@@ -80,8 +80,8 @@ st.markdown(
     <style>
         /* Main page */
         .stApp {
-            background: linear-gradient(135deg, #000F22 0%, #1B3554 38%, #3F6593 68%, #80AAD3 100%);
-            color: #C0E6FD;
+            background: linear-gradient(135deg, #131B36 0%, #143559 48%, #43597C 100%);
+            color: #F3EEF0;
         }
 
         .block-container {
@@ -92,12 +92,12 @@ st.markdown(
 
         /* Header */
         .hero {
-            background: linear-gradient(135deg, #000F22 0%, #1B3554 48%, #3F6593 100%);
+            background: linear-gradient(135deg, #131B36 0%, #143559 52%, #43597C 100%);
             padding: 3.2rem 2rem;
             border-radius: 2px;
             text-align: center;
             box-shadow: 0 16px 35px rgba(17, 34, 80, 0.16);
-            border: 1px solid rgba(192, 230, 253, 0.28);
+            border: 1px solid rgba(219, 131, 132, 0.35);
             margin-bottom: 2rem;
         }
 
@@ -107,7 +107,7 @@ st.markdown(
         }
 
         .hero-title {
-            color: #C0E6FD;
+            color: #F3EEF0;
             font-size: 2.45rem;
             font-weight: 500;
             letter-spacing: 0.02em;
@@ -115,23 +115,23 @@ st.markdown(
         }
 
         .hero-subtitle {
-            color: #C0E6FD;
+            color: #F3EEF0;
             font-size: 0.98rem;
             letter-spacing: 0.04em;
             margin-top: 0.7rem;
         }
 
         div[data-testid="stCaptionContainer"] {
-            color: #80AAD3;
+            color: #AEB9CB;
         }
 
         .stSpinner > div {
-            color: #C0E6FD;
+            color: #F3EEF0;
         }
 
         /* Section headings */
         .section-title {
-            color: #C0E6FD;
+            color: #F3EEF0;
             font-size: 1.05rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -142,30 +142,30 @@ st.markdown(
 
         /* Input */
         div[data-testid="stTextInput"] label {
-            color: #C0E6FD;
+            color: #F3EEF0;
             font-weight: 650;
         }
 
         div[data-testid="stTextInput"] input {
-            border: 1px solid #80AAD3;
+            border: 1px solid #5B6F90;
             border-radius: 2px;
-            background: #1B3554;
-            color: #C0E6FD;
+            background: #143559;
+            color: #F3EEF0;
             padding: 1rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #C0E6FD;
-            box-shadow: 0 0 0 3px rgba(192, 230, 253, 0.12);
+            border-color: #F3EEF0;
+            box-shadow: 0 0 0 3px rgba(91, 111, 144, 0.18);
         }
 
         /* Analyze button */
         div.stButton > button {
             width: 100%;
             border-radius: 2px;
-            border: 1px solid #80AAD3;
-            background: #5B86B6;
-            color: white;
+            border: 1px solid #5B6F90;
+            background: #5B6F90;
+            color: #F3EEF0;
             font-weight: 700;
             font-size: 1rem;
             padding: 0.75rem 1rem;
@@ -175,8 +175,8 @@ st.markdown(
         }
 
         div.stButton > button:hover {
-            background: #BEB7A7;
-            border: 1px solid #80AAD3;
+            background: #131B36;
+            border: 1px solid #5B6F90;
             color: #112250;
             transform: translateY(-1px);
         }
@@ -187,24 +187,24 @@ st.markdown(
             padding: 1.6rem 1.5rem;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #1B3554 0%, #3F6593 100%);
-            box-shadow: 0 14px 30px rgba(0, 15, 34, 0.28);
-            border: 1px solid #80AAD3;
+            background: linear-gradient(135deg, #143559 0%, #43597C 100%);
+            box-shadow: 0 14px 30px rgba(19, 27, 54, 0.30);
+            border: 1px solid #5B6F90;
         }
 
         .result-safe {
-            border-left: 5px solid #E7E2CE;
+            border-left: 5px solid #5B6F90;
         }
 
         .result-danger {
-            border-left: 5px solid #BEB7A7;
+            border-left: 5px solid #DB8384;
         }
 
         .result-label {
             font-size: 0.8rem;
             font-weight: 750;
             letter-spacing: 0.08em;
-            color: #C0E6FD;
+            color: #F3EEF0;
             text-transform: uppercase;
         }
 
@@ -212,20 +212,20 @@ st.markdown(
             font-size: 1.55rem;
             font-weight: 800;
             margin-top: 0.25rem;
-            color: #C0E6FD;
+            color: #F3EEF0;
         }
 
         .probability {
             font-size: 2rem;
             font-weight: 800;
-            color: #C0E6FD;
+            color: #F3EEF0;
             margin-top: 0.35rem;
         }
 
         /* URL card */
         .url-card {
-            background: #1B3554;
-            border: 1px solid #80AAD3;
+            background: #143559;
+            border: 1px solid #5B6F90;
             border-radius: 2px;
             padding: 0.9rem 1rem;
             margin-top: 0.8rem;
@@ -238,26 +238,26 @@ st.markdown(
         .luxury-divider {
             width: 70px;
             height: 2px;
-            background: #C0E6FD;
+            background: #DB8384;
             margin: 1rem auto 0;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            color: #80AAD3;
+            color: #AEB9CB;
             font-size: 0.82rem;
             margin-top: 2.2rem;
             padding-top: 1rem;
-            border-top: 1px solid #3F6593;
+            border-top: 1px solid #43597C;
         }
 
         /* Streamlit alerts */
         div[data-testid="stAlert"] {
             border-radius: 2px;
-            background: #5B86B6;
-            color: white;
-            border: 1px solid #80AAD3;
+            background: #5B6F90;
+            color: #F3EEF0;
+            border: 1px solid #5B6F90;
         }
     </style>
     """,
@@ -400,9 +400,9 @@ if st.button("ANALYZE URL", use_container_width=True):
                         unsafe_allow_html=True
                     )
 
-                    st.warning(
-                        "This URL has been classified as phishing "
-                        "by the machine learning model."
+                    st.markdown(
+                        """<div style="background:#742D36;color:#F3EEF0;border:1px solid #DB8384;border-radius:2px;padding:0.8rem 1rem;">This URL has been classified as phishing by the machine learning model.</div>""",
+                        unsafe_allow_html=True
                     )
 
                 else:
@@ -421,9 +421,9 @@ if st.button("ANALYZE URL", use_container_width=True):
                         unsafe_allow_html=True
                     )
 
-                    st.info(
-                        "This URL has been classified as legitimate "
-                        "by the machine learning model."
+                    st.markdown(
+                        """<div style="background:#143559;color:#F3EEF0;border:1px solid #5B6F90;border-radius:2px;padding:0.8rem 1rem;">This URL has been classified as legitimate by the machine learning model.</div>""",
+                        unsafe_allow_html=True
                     )
 
                 # ------------------------------------------
