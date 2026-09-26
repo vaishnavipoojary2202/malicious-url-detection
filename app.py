@@ -78,251 +78,153 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-
-        :root {
-            --navy: #0B1830;
-            --navy-2: #132A49;
-            --sapphire: #244B73;
-            --gold: #C9A86A;
-            --gold-soft: #E4D3AE;
-            --ivory: #F7F3EA;
-            --cream: #EFE8DA;
-            --taupe: #B7AD9C;
-            --ink: #172238;
-        }
-
         .stApp {
-            background: var(--ivory);
-            color: var(--ink);
+            background: #F7F8FA;
+            color: #172238;
         }
 
         .block-container {
-            max-width: 900px;
-            padding-top: 2.5rem;
-            padding-bottom: 3.5rem;
+            max-width: 760px;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
 
-        /* Luxury hero */
         .hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 88% 15%, rgba(201,168,106,.20), transparent 24%),
-                radial-gradient(circle at 12% 90%, rgba(36,75,115,.42), transparent 30%),
-                linear-gradient(135deg, #081427 0%, #0B1830 52%, #19395D 100%);
-            padding: 4.2rem 2.5rem 3.6rem;
             text-align: center;
-            border: 1px solid rgba(201,168,106,.55);
-            box-shadow: 0 24px 60px rgba(11,24,48,.20);
-            margin-bottom: 2.6rem;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 13px;
-            border: 1px solid rgba(228,211,174,.18);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            border: 1px solid rgba(201,168,106,.22);
-            border-radius: 50%;
-            right: -55px;
-            top: -70px;
+            padding: 1.5rem 0 2.2rem;
+            border-bottom: 1px solid #D9E0E8;
+            margin-bottom: 2.5rem;
         }
 
         .hero-icon {
-            position: relative;
-            color: var(--gold-soft);
-            font-size: 1.15rem;
-            letter-spacing: .45em;
-            margin-left: .45em;
-            margin-bottom: 1.2rem;
+            color: #43597C;
+            font-size: 1.25rem;
+            margin-bottom: .45rem;
         }
 
         .hero-title {
-            position: relative;
-            color: #FAF7F0;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 3rem;
-            line-height: 1.1;
+            color: #131B36;
+            font-family: Georgia, serif;
+            font-size: 2.25rem;
             font-weight: 500;
-            letter-spacing: .01em;
             margin: 0;
         }
 
         .hero-subtitle {
-            position: relative;
-            color: #D9E0E9;
-            font-family: 'DM Sans', sans-serif;
+            color: #6B7788;
             font-size: .9rem;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-            margin-top: 1rem;
+            margin-top: .5rem;
         }
 
-        .gold-line {
-            position: relative;
-            width: 72px;
-            height: 1px;
-            background: var(--gold);
-            margin: 1.35rem auto 0;
-        }
-
-        /* Typography */
         .section-title {
-            color: var(--navy);
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.65rem;
-            font-weight: 500;
-            margin-top: 1.8rem;
-            margin-bottom: .65rem;
+            color: #131B36;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 0 0 .7rem;
         }
 
-        .eyebrow {
-            color: #8D7650;
-            font-family: 'DM Sans', sans-serif;
-            font-size: .72rem;
-            font-weight: 700;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            margin-bottom: .2rem;
+        .helper {
+            color: #788392;
+            font-size: .8rem;
+            margin-top: .5rem;
+            margin-bottom: 1.2rem;
         }
 
-        /* Input */
         div[data-testid="stTextInput"] input {
-            border: 1px solid #CFC6B5;
-            border-radius: 3px;
-            background: #FFFDF8;
-            color: var(--ink);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            padding: 1rem 1.05rem;
-            box-shadow: 0 8px 24px rgba(11,24,48,.05);
+            background: white;
+            color: #131B36;
+            border: 1px solid #C8D0DB;
+            border-radius: 6px;
+            padding: .9rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 2px rgba(201,168,106,.16), 0 8px 24px rgba(11,24,48,.06);
+            border-color: #43597C;
+            box-shadow: 0 0 0 2px rgba(67, 89, 124, .10);
         }
 
-        /* CTA */
         div.stButton > button {
-            border-radius: 3px;
-            border: 1px solid #B6924E;
-            background: linear-gradient(180deg, #D7BB82 0%, #C9A86A 100%);
-            color: #0B1830;
-            font-family: 'DM Sans', sans-serif;
-            font-size: .82rem;
-            font-weight: 700;
-            letter-spacing: .12em;
-            min-height: 3.1rem;
-            box-shadow: 0 10px 24px rgba(11,24,48,.12);
-            transition: all .2s ease;
+            width: 100%;
+            background: #143559;
+            color: white;
+            border: 1px solid #143559;
+            border-radius: 6px;
+            min-height: 2.9rem;
+            font-weight: 600;
+            letter-spacing: .03em;
         }
 
         div.stButton > button:hover {
-            background: linear-gradient(180deg, #E1C993 0%, #D0AE6C 100%);
-            color: #0B1830;
-            border-color: #A98240;
-            transform: translateY(-1px);
+            background: #1B3554;
+            color: white;
+            border-color: #1B3554;
         }
 
-        /* Result */
         .result-card {
-            background: linear-gradient(135deg, #0B1830 0%, #163454 100%);
-            border: 1px solid rgba(201,168,106,.65);
-            border-radius: 3px;
-            padding: 2rem 2.1rem;
             margin-top: 2rem;
-            box-shadow: 0 22px 45px rgba(11,24,48,.18);
+            padding: 1.4rem 1.5rem;
+            background: white;
+            border: 1px solid #D9E0E8;
+            border-radius: 6px;
         }
 
         .result-card.safe {
-            border-top: 4px solid var(--gold);
+            border-left: 4px solid #5B86B6;
         }
 
         .result-card.danger {
-            border-top: 4px solid #B1555A;
+            border-left: 4px solid #B1555A;
         }
 
         .result-label {
-            color: var(--gold-soft);
-            font-family: 'DM Sans', sans-serif;
-            font-size: .68rem;
+            color: #788392;
+            font-size: .7rem;
             font-weight: 700;
-            letter-spacing: .18em;
+            letter-spacing: .12em;
             text-transform: uppercase;
         }
 
         .result-title {
-            color: #FAF7F0;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2rem;
-            font-weight: 500;
-            margin-top: .35rem;
+            color: #131B36;
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-top: .25rem;
         }
 
         .probability {
-            color: #F0D9A4;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2.7rem;
-            margin-top: .55rem;
+            color: #43597C;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: .5rem;
         }
 
         .probability-caption {
-            color: #C7D0DB;
-            font-family: 'DM Sans', sans-serif;
+            color: #788392;
             font-size: .8rem;
-            letter-spacing: .04em;
         }
 
-        /* URL display */
         .url-card {
-            background: #FFFDF8;
-            border: 1px solid #D3C9B8;
-            border-left: 3px solid var(--gold);
-            border-radius: 3px;
-            padding: 1rem 1.1rem;
-            margin-top: .7rem;
-            color: #26364D;
+            background: white;
+            border: 1px solid #D9E0E8;
+            border-radius: 6px;
+            padding: .9rem 1rem;
+            color: #43597C;
             word-break: break-all;
-            font-family: 'DM Sans', sans-serif;
-            font-size: .9rem;
-        }
-
-        .helper {
-            color: #7A7A73;
-            font-family: 'DM Sans', sans-serif;
-            font-size: .78rem;
-            margin-top: .55rem;
+            font-family: monospace;
+            font-size: .85rem;
         }
 
         .footer {
             text-align: center;
-            color: #8D8A82;
-            font-family: 'DM Sans', sans-serif;
-            font-size: .7rem;
-            letter-spacing: .12em;
-            text-transform: uppercase;
+            color: #98A1AD;
+            font-size: .72rem;
             margin-top: 3rem;
-            padding-top: 1.3rem;
-            border-top: 1px solid #D7CFBF;
+            padding-top: 1rem;
+            border-top: 1px solid #D9E0E8;
         }
 
         div[data-testid="stAlert"] {
-            border-radius: 3px;
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        .stSpinner > div {
-            color: var(--navy);
+            border-radius: 6px;
         }
     </style>
     """,
@@ -337,10 +239,9 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-        <div class="hero-icon">◆ &nbsp; ◆ &nbsp; ◆</div>
+        <div class="hero-icon">🛡</div>
         <div class="hero-title">Malicious URL Detection</div>
-        <div class="hero-subtitle">Intelligent URL Security Analysis</div>
-        <div class="gold-line"></div>
+        <div class="hero-subtitle">Machine-learning based URL classification</div>
     </div>
     """,
     unsafe_allow_html=True
@@ -352,7 +253,7 @@ st.markdown(
 # --------------------------------------------------
 
 st.markdown(
-    '<div class="eyebrow">Security Scanner</div><div class="section-title">Analyze a URL</div>',
+    '<div class="section-title">Analyze a URL</div>',
     unsafe_allow_html=True
 )
 
@@ -372,7 +273,7 @@ st.markdown(
 # Prediction
 # --------------------------------------------------
 
-if st.button("ANALYZE  URL", use_container_width=True):
+if st.button("Analyze URL", use_container_width=True):
 
     if not url.strip():
 
@@ -495,7 +396,7 @@ if st.button("ANALYZE  URL", use_container_width=True):
                 # ------------------------------------------
 
                 st.markdown(
-                    '<div class="eyebrow" style="margin-top:2rem;">Analysis Detail</div><div class="section-title" style="margin-top:.2rem;">Analyzed URL</div>',
+                    '<div class="section-title" style="margin-top:2rem;">Analyzed URL</div>',
                     unsafe_allow_html=True
                 )
 
