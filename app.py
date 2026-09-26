@@ -78,186 +78,251 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-        /* Main page */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+        :root {
+            --navy: #0B1830;
+            --navy-2: #132A49;
+            --sapphire: #244B73;
+            --gold: #C9A86A;
+            --gold-soft: #E4D3AE;
+            --ivory: #F7F3EA;
+            --cream: #EFE8DA;
+            --taupe: #B7AD9C;
+            --ink: #172238;
+        }
+
         .stApp {
-            background: linear-gradient(135deg, #131B36 0%, #143559 48%, #43597C 100%);
-            color: #F3EEF0;
+            background: var(--ivory);
+            color: var(--ink);
         }
 
         .block-container {
-            max-width: 850px;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+            max-width: 900px;
+            padding-top: 2.5rem;
+            padding-bottom: 3.5rem;
         }
 
-        /* Header */
+        /* Luxury hero */
         .hero {
-            background: linear-gradient(135deg, #131B36 0%, #143559 52%, #43597C 100%);
-            padding: 3.2rem 2rem;
-            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 88% 15%, rgba(201,168,106,.20), transparent 24%),
+                radial-gradient(circle at 12% 90%, rgba(36,75,115,.42), transparent 30%),
+                linear-gradient(135deg, #081427 0%, #0B1830 52%, #19395D 100%);
+            padding: 4.2rem 2.5rem 3.6rem;
             text-align: center;
-            box-shadow: 0 16px 35px rgba(17, 34, 80, 0.16);
-            border: 1px solid rgba(219, 131, 132, 0.35);
-            margin-bottom: 2rem;
+            border: 1px solid rgba(201,168,106,.55);
+            box-shadow: 0 24px 60px rgba(11,24,48,.20);
+            margin-bottom: 2.6rem;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 13px;
+            border: 1px solid rgba(228,211,174,.18);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(201,168,106,.22);
+            border-radius: 50%;
+            right: -55px;
+            top: -70px;
         }
 
         .hero-icon {
-            font-size: 3rem;
-            margin-bottom: 0.3rem;
+            position: relative;
+            color: var(--gold-soft);
+            font-size: 1.15rem;
+            letter-spacing: .45em;
+            margin-left: .45em;
+            margin-bottom: 1.2rem;
         }
 
         .hero-title {
-            color: #F3EEF0;
-            font-size: 2.45rem;
+            position: relative;
+            color: #FAF7F0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            line-height: 1.1;
             font-weight: 500;
-            letter-spacing: 0.02em;
+            letter-spacing: .01em;
             margin: 0;
         }
 
         .hero-subtitle {
-            color: #F3EEF0;
-            font-size: 0.98rem;
-            letter-spacing: 0.04em;
-            margin-top: 0.7rem;
-        }
-
-        div[data-testid="stCaptionContainer"] {
-            color: #AEB9CB;
-        }
-
-        .stSpinner > div {
-            color: #F3EEF0;
-        }
-
-        /* Section headings */
-        .section-title {
-            color: #F3EEF0;
-            font-size: 1.05rem;
-            letter-spacing: 0.08em;
+            position: relative;
+            color: #D9E0E9;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .9rem;
+            letter-spacing: .16em;
             text-transform: uppercase;
-            font-weight: 700;
             margin-top: 1rem;
-            margin-bottom: 0.55rem;
+        }
+
+        .gold-line {
+            position: relative;
+            width: 72px;
+            height: 1px;
+            background: var(--gold);
+            margin: 1.35rem auto 0;
+        }
+
+        /* Typography */
+        .section-title {
+            color: var(--navy);
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.65rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: .65rem;
+        }
+
+        .eyebrow {
+            color: #8D7650;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: .2rem;
         }
 
         /* Input */
-        div[data-testid="stTextInput"] label {
-            color: #F3EEF0;
-            font-weight: 650;
-        }
-
         div[data-testid="stTextInput"] input {
-            border: 1px solid #5B6F90;
-            border-radius: 2px;
-            background: #143559;
-            color: #F3EEF0;
-            padding: 1rem 1rem;
+            border: 1px solid #CFC6B5;
+            border-radius: 3px;
+            background: #FFFDF8;
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            padding: 1rem 1.05rem;
+            box-shadow: 0 8px 24px rgba(11,24,48,.05);
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #F3EEF0;
-            box-shadow: 0 0 0 3px rgba(91, 111, 144, 0.18);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(201,168,106,.16), 0 8px 24px rgba(11,24,48,.06);
         }
 
-        /* Analyze button */
+        /* CTA */
         div.stButton > button {
-            width: 100%;
-            border-radius: 2px;
-            border: 1px solid #5B6F90;
-            background: #5B6F90;
-            color: #F3EEF0;
+            border-radius: 3px;
+            border: 1px solid #B6924E;
+            background: linear-gradient(180deg, #D7BB82 0%, #C9A86A 100%);
+            color: #0B1830;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .82rem;
             font-weight: 700;
-            font-size: 1rem;
-            padding: 0.75rem 1rem;
-            min-height: 3rem;
-            box-shadow: 0 8px 20px rgba(0, 15, 34, 0.28);
-            transition: all 0.2s ease;
+            letter-spacing: .12em;
+            min-height: 3.1rem;
+            box-shadow: 0 10px 24px rgba(11,24,48,.12);
+            transition: all .2s ease;
         }
 
         div.stButton > button:hover {
-            background: #131B36;
-            border: 1px solid #5B6F90;
-            color: #112250;
+            background: linear-gradient(180deg, #E1C993 0%, #D0AE6C 100%);
+            color: #0B1830;
+            border-color: #A98240;
             transform: translateY(-1px);
         }
 
-        /* Result cards */
+        /* Result */
         .result-card {
-            border-radius: 2px;
-            padding: 1.6rem 1.5rem;
-            margin-top: 1.25rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #143559 0%, #43597C 100%);
-            box-shadow: 0 14px 30px rgba(19, 27, 54, 0.30);
-            border: 1px solid #5B6F90;
+            background: linear-gradient(135deg, #0B1830 0%, #163454 100%);
+            border: 1px solid rgba(201,168,106,.65);
+            border-radius: 3px;
+            padding: 2rem 2.1rem;
+            margin-top: 2rem;
+            box-shadow: 0 22px 45px rgba(11,24,48,.18);
         }
 
-        .result-safe {
-            border-left: 5px solid #5B6F90;
+        .result-card.safe {
+            border-top: 4px solid var(--gold);
         }
 
-        .result-danger {
-            border-left: 5px solid #DB8384;
+        .result-card.danger {
+            border-top: 4px solid #B1555A;
         }
 
         .result-label {
-            font-size: 0.8rem;
-            font-weight: 750;
-            letter-spacing: 0.08em;
-            color: #F3EEF0;
+            color: var(--gold-soft);
+            font-family: 'DM Sans', sans-serif;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .18em;
             text-transform: uppercase;
         }
 
         .result-title {
-            font-size: 1.55rem;
-            font-weight: 800;
-            margin-top: 0.25rem;
-            color: #F3EEF0;
+            color: #FAF7F0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: .35rem;
         }
 
         .probability {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #F3EEF0;
-            margin-top: 0.35rem;
+            color: #F0D9A4;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.7rem;
+            margin-top: .55rem;
         }
 
-        /* URL card */
+        .probability-caption {
+            color: #C7D0DB;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .8rem;
+            letter-spacing: .04em;
+        }
+
+        /* URL display */
         .url-card {
-            background: #143559;
-            border: 1px solid #5B6F90;
-            border-radius: 2px;
-            padding: 0.9rem 1rem;
-            margin-top: 0.8rem;
-            color: #112250;
+            background: #FFFDF8;
+            border: 1px solid #D3C9B8;
+            border-left: 3px solid var(--gold);
+            border-radius: 3px;
+            padding: 1rem 1.1rem;
+            margin-top: .7rem;
+            color: #26364D;
             word-break: break-all;
-            font-family: monospace;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .9rem;
         }
 
-        /* Decorative luxury divider */
-        .luxury-divider {
-            width: 70px;
-            height: 2px;
-            background: #DB8384;
-            margin: 1rem auto 0;
+        .helper {
+            color: #7A7A73;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .78rem;
+            margin-top: .55rem;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
-            color: #AEB9CB;
-            font-size: 0.82rem;
-            margin-top: 2.2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #43597C;
+            color: #8D8A82;
+            font-family: 'DM Sans', sans-serif;
+            font-size: .7rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-top: 3rem;
+            padding-top: 1.3rem;
+            border-top: 1px solid #D7CFBF;
         }
 
-        /* Streamlit alerts */
         div[data-testid="stAlert"] {
-            border-radius: 2px;
-            background: #5B6F90;
-            color: #F3EEF0;
-            border: 1px solid #5B6F90;
+            border-radius: 3px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .stSpinner > div {
+            color: var(--navy);
         }
     </style>
     """,
@@ -272,12 +337,10 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-        <div class="hero-icon">◈</div>
+        <div class="hero-icon">◆ &nbsp; ◆ &nbsp; ◆</div>
         <div class="hero-title">Malicious URL Detection</div>
-        <div class="hero-subtitle">
-            Machine-learning based analysis for phishing URL detection
-        </div>
-    <div class="luxury-divider"></div>
+        <div class="hero-subtitle">Intelligent URL Security Analysis</div>
+        <div class="gold-line"></div>
     </div>
     """,
     unsafe_allow_html=True
@@ -289,7 +352,7 @@ st.markdown(
 # --------------------------------------------------
 
 st.markdown(
-    '<div class="section-title">Enter a URL to analyze</div>',
+    '<div class="eyebrow">Security Scanner</div><div class="section-title">Analyze a URL</div>',
     unsafe_allow_html=True
 )
 
@@ -299,8 +362,9 @@ url = st.text_input(
     label_visibility="collapsed"
 )
 
-st.caption(
-    "Analyze the URL structure and character patterns using our trained ML model."
+st.markdown(
+    '<div class="helper">Enter a URL below. Our trained machine-learning model analyzes its structural and character patterns.</div>',
+    unsafe_allow_html=True
 )
 
 
@@ -308,7 +372,7 @@ st.caption(
 # Prediction
 # --------------------------------------------------
 
-if st.button("ANALYZE URL", use_container_width=True):
+if st.button("ANALYZE  URL", use_container_width=True):
 
     if not url.strip():
 
@@ -390,11 +454,11 @@ if st.button("ANALYZE URL", use_container_width=True):
 
                     st.markdown(
                         f"""
-                        <div class="result-card result-danger">
+                        <div class="result-card danger">
                             <div class="result-label">Security Analysis</div>
-                            <div class="result-title">🚨 Phishing URL Detected</div>
+                            <div class="result-title">Phishing URL Detected</div>
                             <div class="probability">{confidence:.2f}%</div>
-                            <div>Phishing probability</div>
+                            <div class="probability-caption">Phishing Probability</div>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -411,11 +475,11 @@ if st.button("ANALYZE URL", use_container_width=True):
 
                     st.markdown(
                         f"""
-                        <div class="result-card result-safe">
+                        <div class="result-card safe">
                             <div class="result-label">Security Analysis</div>
-                            <div class="result-title">✅ Legitimate URL</div>
+                            <div class="result-title">Legitimate URL</div>
                             <div class="probability">{confidence:.2f}%</div>
-                            <div>Legitimate probability</div>
+                            <div class="probability-caption">Legitimate Probability</div>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -431,7 +495,7 @@ if st.button("ANALYZE URL", use_container_width=True):
                 # ------------------------------------------
 
                 st.markdown(
-                    '<div class="section-title">Analyzed URL</div>',
+                    '<div class="eyebrow" style="margin-top:2rem;">Analysis Detail</div><div class="section-title" style="margin-top:.2rem;">Analyzed URL</div>',
                     unsafe_allow_html=True
                 )
 
