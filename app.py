@@ -80,8 +80,8 @@ st.markdown(
     <style>
         /* Main page */
         .stApp {
-            background: #112250;
-            color: #F5F4F0;
+            background: #F5F4F0;
+            color: #112250;
         }
 
         .block-container {
@@ -92,12 +92,13 @@ st.markdown(
 
         /* Header */
         .hero {
-            background: linear-gradient(135deg, #112250 0%, #3B507D 100%);
-            padding: 2.2rem 2rem;
-            border-radius: 24px;
+            background: radial-gradient(circle at 20% 15%, rgba(231, 226, 206, 0.18), transparent 28%), radial-gradient(circle at 85% 75%, rgba(190, 183, 167, 0.16), transparent 25%), linear-gradient(135deg, #112250 0%, #1b315b 55%, #3B507D 100%);
+            padding: 3.2rem 2rem;
+            border-radius: 2px;
             text-align: center;
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
-            margin-bottom: 1.5rem;
+            box-shadow: 0 16px 35px rgba(17, 34, 80, 0.16);
+            border: 1px solid rgba(231, 226, 206, 0.45);
+            margin-bottom: 2rem;
         }
 
         .hero-icon {
@@ -107,19 +108,21 @@ st.markdown(
 
         .hero-title {
             color: #F5F4F0;
-            font-size: 2.15rem;
-            font-weight: 750;
+            font-size: 2.45rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
             margin: 0;
         }
 
         .hero-subtitle {
             color: #E7E2CE;
-            font-size: 1rem;
-            margin-top: 0.55rem;
+            font-size: 0.98rem;
+            letter-spacing: 0.04em;
+            margin-top: 0.7rem;
         }
 
         div[data-testid="stCaptionContainer"] {
-            color: #BEB7A7;
+            color: #3B507D;
         }
 
         .stSpinner > div {
@@ -128,8 +131,10 @@ st.markdown(
 
         /* Section headings */
         .section-title {
-            color: #E7E2CE;
-            font-size: 1.15rem;
+            color: #112250;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             font-weight: 700;
             margin-top: 1rem;
             margin-bottom: 0.55rem;
@@ -142,57 +147,57 @@ st.markdown(
         }
 
         div[data-testid="stTextInput"] input {
-            border: 1.5px solid #BEB7A7;
-            border-radius: 14px;
-            background: #F5F4F0;
+            border: 1px solid #BEB7A7;
+            border-radius: 2px;
+            background: #fffdf8;
             color: #112250;
-            padding: 0.85rem 1rem;
+            padding: 1rem 1rem;
         }
 
         div[data-testid="stTextInput"] input:focus {
-            border-color: #E7E2CE;
-            box-shadow: 0 0 0 3px rgba(231, 226, 206, 0.18);
+            border-color: #3B507D;
+            box-shadow: 0 0 0 3px rgba(59, 80, 125, 0.10);
         }
 
         /* Analyze button */
         div.stButton > button {
             width: 100%;
-            border-radius: 14px;
-            border: none;
-            background: #3B507D;
-            color: #F5F4F0;
+            border-radius: 2px;
+            border: 1px solid #B08B4F;
+            background: #E7E2CE;
+            color: #112250;
             font-weight: 700;
             font-size: 1rem;
             padding: 0.75rem 1rem;
             min-height: 3rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+            box-shadow: 0 8px 18px rgba(17, 34, 80, 0.12);
             transition: all 0.2s ease;
         }
 
         div.stButton > button:hover {
-            background: #112250;
-            border: none;
-            color: #F5F4F0;
+            background: #BEB7A7;
+            border: 1px solid #B08B4F;
+            color: #112250;
             transform: translateY(-1px);
         }
 
         /* Result cards */
         .result-card {
-            border-radius: 20px;
-            padding: 1.35rem 1.5rem;
+            border-radius: 2px;
+            padding: 1.6rem 1.5rem;
             margin-top: 1.25rem;
             margin-bottom: 1rem;
-            background: #3B507D;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+            background: linear-gradient(135deg, #112250 0%, #3B507D 100%);
+            box-shadow: 0 14px 30px rgba(17, 34, 80, 0.18);
             border: 1px solid #BEB7A7;
         }
 
         .result-safe {
-            border-left: 6px solid #16a34a;
+            border-left: 5px solid #E7E2CE;
         }
 
         .result-danger {
-            border-left: 6px solid #dc2626;
+            border-left: 5px solid #BEB7A7;
         }
 
         .result-label {
@@ -214,19 +219,27 @@ st.markdown(
             font-size: 2rem;
             font-weight: 800;
             color: #E7E2CE;
-            margin-top: 0.25rem;
+            margin-top: 0.35rem;
         }
 
         /* URL card */
         .url-card {
-            background: #F5F4F0;
+            background: #fffdf8;
             border: 1px solid #BEB7A7;
-            border-radius: 14px;
+            border-radius: 2px;
             padding: 0.9rem 1rem;
             margin-top: 0.8rem;
             color: #112250;
             word-break: break-all;
             font-family: monospace;
+        }
+
+        /* Decorative luxury divider */
+        .luxury-divider {
+            width: 70px;
+            height: 2px;
+            background: #B08B4F;
+            margin: 1rem auto 0;
         }
 
         /* Footer */
@@ -236,14 +249,14 @@ st.markdown(
             font-size: 0.82rem;
             margin-top: 2.2rem;
             padding-top: 1rem;
-            border-top: 1px solid #3B507D;
+            border-top: 1px solid #BEB7A7;
         }
 
         /* Streamlit alerts */
         div[data-testid="stAlert"] {
-            border-radius: 14px;
-            background: #3B507D;
-            color: #F5F4F0;
+            border-radius: 2px;
+            background: #E7E2CE;
+            color: #112250;
             border: 1px solid #BEB7A7;
         }
     </style>
@@ -259,11 +272,12 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-        <div class="hero-icon">🛡️</div>
+        <div class="hero-icon">◈</div>
         <div class="hero-title">Malicious URL Detection</div>
         <div class="hero-subtitle">
             Machine-learning based analysis for phishing URL detection
         </div>
+    <div class="luxury-divider"></div>
     </div>
     """,
     unsafe_allow_html=True
@@ -275,7 +289,7 @@ st.markdown(
 # --------------------------------------------------
 
 st.markdown(
-    '<div class="section-title">🔗 Enter a URL to analyze</div>',
+    '<div class="section-title">Enter a URL to analyze</div>',
     unsafe_allow_html=True
 )
 
@@ -294,7 +308,7 @@ st.caption(
 # Prediction
 # --------------------------------------------------
 
-if st.button("🔍  Analyze URL", use_container_width=True):
+if st.button("ANALYZE URL", use_container_width=True):
 
     if not url.strip():
 
