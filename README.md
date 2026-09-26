@@ -1,4 +1,4 @@
-Absolutely. I’ll update the README with the **exact 20 structural features**, a clearer methodology, and a proper **end-to-end workflow**. I’ll also fix the broken Markdown tables in your current version.
+
 
 # 🛡️ Malicious URL Detection using Machine Learning
 
