@@ -1,0 +1,11 @@
+# Core application and data libraries
+streamlit
+pandas
+scipy
+
+# Machine learning
+scikit-learn
+xgboost
+
+# Model and preprocessing artifact loading
+joblib
